@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        tools:ignore="HardcodedText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RPGTextGame"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp"
+            android:textSize="35sp" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="25dp"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="30dp"
+                app:strokeWidth="0dp">
+
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="1">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardMe"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:layout_margin="10dp"
+                        android:layout_marginRight="5dp"
+                        app:cardCornerRadius="40dp"
+                        app:strokeWidth="0dp">
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:columnCount="2"
+                            android:rowCount="3"
+                            android:layout_margin="10dp">
+
+
+                            <TextView
+                                android:id="@+id/txtMe"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_row="0"
+                                android:layout_column="0"
+                                android:layout_columnWeight="1"
+                                android:layout_rowWeight="1"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:text="Your Turn" />
+
+
+                            <ImageView
+                                android:id="@+id/imgMe"
+                                android:layout_width="0dp"
+                                android:layout_height="125dp"
+                                android:layout_row="1"
+                                android:layout_column="0"
+                                android:layout_columnWeight="1"
+                                android:layout_rowWeight="1"
+                                android:src="@drawable/man"
+                                android:padding="0dp"
+                                android:scaleType="fitCenter" />
+
+
+                            <TextView
+                                android:id="@+id/txtMeStats"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_row="2"
+                                android:layout_column="0"
+                                android:layout_columnWeight="1"
+                                android:layout_rowWeight="1"
+                                android:gravity="center"
+                                android:textSize="20sp"
+                                android:fontFamily="sans-serif-black"
+                                android:text="" />
+                        </GridLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardMonster"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:layout_margin="10dp"
+                        android:layout_marginLeft="5dp"
+                        app:cardCornerRadius="40dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="0dp">
+
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_row="0"
+                            android:layout_column="1"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:id="@+id/txtMonster"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_row="0"
+                                android:layout_column="1"
+                                android:layout_columnWeight="1"
+                                android:layout_rowWeight="1"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:text="Monster" />
+
+                            <ImageView
+                                android:id="@+id/imgMonster"
+                                android:layout_width="0dp"
+                                android:layout_height="125dp"
+                                android:layout_columnWeight="1"
+                                android:layout_rowWeight="1"
+                                android:layout_row="1"
+                                android:layout_column="1"
+                                android:padding="5dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/monster" />
+
+
+                            <TextView
+                                android:id="@+id/txtMonsterStats"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_row="2"
+                                android:layout_column="1"
+                                android:layout_columnWeight="1"
+                                android:layout_rowWeight="1"
+                                android:gravity="center"
+                                android:textSize="20sp"
+                                android:fontFamily="sans-serif-black"
+                                android:text="" />
+
+                        </GridLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+                </GridLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                app:cardCornerRadius="40dp"
+                android:layout_marginLeft="25dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="25dp"
+                app:cardElevation="45dp"
+                app:strokeWidth="0dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+
+
+                    <GridLayout
+                        android:id="@+id/layoutAction"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="#50000000"
+                        android:columnCount="2"
+                        android:rowCount="1">
+
+                        <ImageView
+                            android:id="@+id/imgAction"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/transparent"
+                            android:padding="20dp"
+                            android:layout_column="0"
+                            android:layout_columnWeight="1"
+                            android:layout_rowWeight="1"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:id="@+id/txtAction"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_columnWeight="1"
+                            android:paddingRight="20dp"
+                            android:layout_rowWeight="1"
+                            android:textColor="@color/white"
+
+                            android:gravity="left|center_vertical"
+                            android:textSize="18sp"
+                            android:text="HI" />
+
+                    </GridLayout>
+
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"/>
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/btnAttack"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:layout_column="2"
+                        android:layout_row="0"
+                        android:text="Attack">
+
+                    </com.google.android.material.switchmaterial.SwitchMaterial>
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/btnDefend"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:layout_column="2"
+                        android:layout_row="0"
+                        android:text="Defend">
+
+                    </com.google.android.material.switchmaterial.SwitchMaterial>
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/btnHeal"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:layout_column="2"
+                        android:layout_row="0"
+                        android:text="Heal">
+
+                    </com.google.android.material.switchmaterial.SwitchMaterial>
+
+                    <LinearLayout
+                        android:id="@+id/layoutLightSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnRoll"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_margin="12dp"
+                        android:enabled="false"
+
+                        android:text="Roll" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>
